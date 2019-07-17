@@ -1,11 +1,11 @@
 {
-	"name": "customsortablejs",
-  "homepage": "https://github.com/SortableJS/Sortable",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/super-zz/customSortbalejs.git"
-  },
-	"version": "1.10.0-rc3",
+	"name": "customSortablejs",
+	"homepage": "https://github.com/SortableJS/Sortable",
+	"repository": {
+	"type": "git",
+	"url": "git+https://github.com/super-zz/customSortbalejs.git"
+	},
+	"version": "1.0.0",
 	"devDependencies": {
 		"@babel/core": "^7.4.4",
 		"@babel/plugin-transform-object-assign": "^7.2.0",
