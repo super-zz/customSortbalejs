@@ -195,6 +195,7 @@ function MultiDragPlugin() {
 		},
 
 		dragOver({ target, completed }) {
+
 			if (folding && ~multiDragElements.indexOf(target)) {
 				return completed(false);
 			}
@@ -466,6 +467,9 @@ function MultiDragPlugin() {
 		},
 
 		_deselectMultiDrag(evt) {
+			// disable mul deselect by zhengyu
+			return;
+
 			if (dragStarted) return;
 
 			// Only deselect if selection is in this sortable
@@ -532,6 +536,16 @@ function MultiDragPlugin() {
 				if (!sortable || !sortable.options.multiDrag || !~index) return;
 				toggleClass(el, sortable.options.selectedClass, false);
 				multiDragElements.splice(index, 1);
+			},
+			deselectAll() {
+				// multiDragElements.forEach((el) => {
+				// 	// toggleClass(el, sortable.options.selectedClass, false);
+				// });
+				multiDragElements = [];
+				// console.log('取消选中all', multiDragElements);
+			},
+			returnEle() {
+				return multiDragElements;
 			}
 		},
 		eventOptions() {
